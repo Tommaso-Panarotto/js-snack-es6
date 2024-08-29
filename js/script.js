@@ -18,3 +18,18 @@ Generiamo e stampiamo in console la lista per i segnaposto.
 1. genero la lista ad oggetti partendo dall'array
 2. mostro in console i dati
 */
+
+//* FASE PREPARATORIA
+// creo costante e array
+const table = 'Tavolo Vip';
+const guest = ['Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 'Georgina Rodriguez', 'Chiara Ferragni', 'George Clooney', 'Amal Clooney', 'Fedez', 'Amadeus', 'Fiorello'];
+
+//variabile
+let placeHolder = [];
+
+//? FASE DI ELABORAZIONE
+guest.forEach((g, i) => {
+    placeHolder.push({ name: g, place: i + 1, tableName: table });
+});
+
+console.log(placeHolder);
