@@ -25,7 +25,7 @@ const table = 'Tavolo Vip';
 const guest = ['Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 'Georgina Rodriguez', 'Chiara Ferragni', 'George Clooney', 'Amal Clooney', 'Fedez', 'Amadeus', 'Fiorello'];
 
 //variabile
-let placeHolder = [];
+const placeHolder = [];
 
 //? FASE DI ELABORAZIONE
 guest.forEach((g, i) => {
@@ -33,3 +33,18 @@ guest.forEach((g, i) => {
 });
 
 console.log(placeHolder);
+
+/*
+SNACK 2
+Abbiamo un elenco degli studenti di una facoltà, identificati da id, Nome e somma totale dei loro voti di esame...
+1. Per preparare l'aula di un nuovo corso, dobbiamo stampare le targhe col nome degli studenti: creare una lista contenente il loro nome tutto in maiuscolo
+ES (Marco della Rovere => MARCO DELLA ROVERE);
+2. Dobbiamo creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70
+3. Dobbiamo creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70 e id superiore a 120
+*/
+
+/*
+0.creo array ad oggetti fornito
+1.creo array con i nomi in maiuscolo
+2.creo le liste degli studenti con le varie categorie di voti
+*/
