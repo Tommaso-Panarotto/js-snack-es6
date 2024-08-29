@@ -32,7 +32,7 @@ guest.forEach((g, i) => {
     placeHolder.push({ name: g, place: i + 1, tableName: table });
 });
 
-console.log(placeHolder);
+console.table(placeHolder);
 
 /*
 SNACK 2
@@ -54,7 +54,7 @@ const students = [
     { id: 213, name: 'Marco della Rovere', Grades: 78 },
     { id: 110, name: 'Paola Cortellessa', Grades: 96 },
     { id: 250, name: 'Andrea Mantegna', Grades: 48 },
-    { id: 145, name: ' Gaia Borromini', Grades: 74 },
+    { id: 145, name: 'Gaia Borromini', Grades: 74 },
     { id: 196, name: 'Luigi Grimaldello', Grades: 68 },
     { id: 102, name: 'Piero della Francesca', Grades: 50 },
     { id: 120, name: 'Francesca da Polenta', Grades: 84 }
@@ -63,4 +63,13 @@ const students = [
 //? FASE DI ELABORAZIONE
 // array nomi in maisucolo
 const names = students.map(s => s.name.toUpperCase());
-console.log(names);
+console.table(names);
+
+// array voti superiori a 70 
+const over70Grade = students.filter(s => s.Grades > 70);
+console.table(over70Grade);
+
+// array voti superiori a 70 con id superiore a 120
+const overIdGrade = students.filter(s => s.Grades > 70 && s.id > 120);
+console.table(overIdGrade);
+
