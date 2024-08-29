@@ -48,3 +48,14 @@ ES (Marco della Rovere => MARCO DELLA ROVERE);
 1.creo array con i nomi in maiuscolo
 2.creo le liste degli studenti con le varie categorie di voti
 */
+
+//*FASE PREPARATORIA
+const students = [
+    { id: 213, name: 'Marco della Rovere', Grades: 78 },
+    { id: 110, name: 'Paola Cortellessa', Grades: 96 },
+    { id: 250, name: 'Andrea Mantegna', Grades: 48 },
+    { id: 145, name: ' Gaia Borromini', Grades: 74 },
+    { id: 196, name: 'Luigi Grimaldello', Grades: 68 },
+    { id: 102, name: 'Piero della Francesca', Grades: 50 },
+    { id: 120, name: 'Francesca da Polenta', Grades: 84 }
+];
