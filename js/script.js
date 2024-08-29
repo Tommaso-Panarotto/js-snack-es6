@@ -59,3 +59,8 @@ const students = [
     { id: 102, name: 'Piero della Francesca', Grades: 50 },
     { id: 120, name: 'Francesca da Polenta', Grades: 84 }
 ];
+
+//? FASE DI ELABORAZIONE
+// array nomi in maisucolo
+const names = students.map(s => s.name.toUpperCase());
+console.log(names);
