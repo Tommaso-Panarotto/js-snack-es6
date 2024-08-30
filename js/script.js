@@ -93,6 +93,10 @@ const bikes = [
     { name: 'MTB', weight: 13 }
 ];
 
+//recupero gli elementi dal DOM
+const bikeList = document.getElementById('bike');
+const result = document.getElementById('light');
+
 //variabili
 let lighterBike;
 let bikeWeight;
@@ -100,12 +104,19 @@ let bikeWeight;
 //FASE DI ELABORAZIONE
 bikes.forEach(b => {
     const { name, weight } = b;
+    bikeList.innerHTML += `
+    <li>
+    <b>${name}</b>
+    peso ${weight} kg
+    </li>`;
     if (!(bikeWeight < weight)) {
         bikeWeight = weight;
-        lighterBike = `la bici più leggera è ${name} con peso pari a ${weight} kg`;
+        lighterBike = `${name} con peso pari a ${weight} kg`;
     };
 })
 
+//FASE DI OUTPUT
+result.innerText = lighterBike;
 console.log(lighterBike);
 
 /*
@@ -153,10 +164,33 @@ const clubs = [
 ];
 
 
+//recupero gli elementi dal DOM
+const serie = document.getElementById('serie');
+const foulsForClub = document.querySelector('.fouls-clubs');
+
 //FASE DI ELABORAZIONE
 clubs.forEach(c => {
     c.goals = Math.floor(Math.random() * 100);
     c.fouls = Math.floor(Math.random() * 50);
+    serie.innerHTML += `
+    <li>
+      <h3>${c.name}</h3>
+      <ul>
+        <li>goals: ${c.goals}</li>
+        <li>falli: ${c.fouls}</li>
+      </ul>
+    </li>    
+    `;
+
+    foulsForClub.innerHTML += `
+    <li>
+      <h3>${c.name}</h3>
+      <ul>
+        <li>falli: ${c.fouls}</li>
+      </ul>
+    </li>    
+    `;
+
 })
 
 
