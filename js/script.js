@@ -21,7 +21,7 @@ Generiamo e stampiamo in console la lista per i segnaposto.
 
 //* FASE PREPARATORIA
 // creo costante e array
-const table = 'Tavolo Vip';
+/*const table = 'Tavolo Vip';
 const guest = ['Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 'Georgina Rodriguez', 'Chiara Ferragni', 'George Clooney', 'Amal Clooney', 'Fedez', 'Amadeus', 'Fiorello'];
 
 //variabile
@@ -50,7 +50,7 @@ ES (Marco della Rovere => MARCO DELLA ROVERE);
 */
 
 //*FASE PREPARATORIA
-const students = [
+/*const students = [
     { id: 213, name: 'Marco della Rovere', Grades: 78 },
     { id: 110, name: 'Paola Cortellessa', Grades: 96 },
     { id: 250, name: 'Andrea Mantegna', Grades: 48 },
@@ -70,6 +70,40 @@ const over70Grade = students.filter(s => s.Grades > 70);
 console.table(over70Grade);
 
 // array voti superiori a 70 con id superiore a 120
-const overIdGrade = students.filter(s => s.Grades > 70 && s.id > 120);
+const overIdGrade = over70Grade.filter(s => s.id > 120);
 console.table(overIdGrade);
 
+
+
+/*
+SNACK 3
+Creare un array di oggetti:
+Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
+Stampare in console la bici con peso minore utilizzando destructuring e template literal
+*/
+
+//FASE PREPARATORIA
+const bikes = [
+    { name: 'gravel', weight: 10 },
+    { name: 'Ebike', weight: 23 },
+    { name: 'scatto fisso', weight: 9 },
+    { name: 'cronometro', weight: 7 },
+    { name: 'aeroad', weight: 7.5 },
+    { name: 'endurance', weight: 6.5 },
+    { name: 'MTB', weight: 13 }
+];
+
+//variabili
+let lighterBike;
+let bikeWeight;
+
+//FASE DI ELABORAZIONE
+bikes.forEach(b => {
+    const { name, weight } = b;
+    if (!(bikeWeight < weight)) {
+        bikeWeight = weight;
+        lighterBike = `la bici più leggera è ${name} con peso pari a ${weight} kg`;
+    };
+})
+
+console.log(lighterBike);
